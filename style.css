@@ -11,12 +11,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
 }
 
 .container {
+  flex: 1; /* Make the main content grow and fill available space */
   width: 90%;
   max-width: 900px;
   padding: 20px;
+  padding-top: 7%;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -82,4 +85,40 @@ thead {
 .input-group input[type="text"],
 .input-group input[type="number"] {
   flex: 1;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure footer stays at the bottom */
+@media (max-width: 768px) {
+  .footer-links {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .footer-links a {
+    display: block;
+    margin-bottom: 5px;
+  }
 }
